@@ -27,7 +27,7 @@ section.background-image::after {
   background-color: #1b1f24;
   position: absolute;
   left: 0;
-  bottom: -10rem;
+  bottom: -5rem;
   transform: skewY(-5deg);
 }
 
@@ -38,7 +38,7 @@ section.profile::after {
   background-color: #1b1f24;
   position: absolute;
   left: 0;
-  bottom: -10rem;
+  bottom: -5rem;
   transform: skewY(5deg);
 }
 

@@ -166,9 +166,10 @@ const App: React.FC = () => {
 
                     <div className="summary flex justify-center mt-10 h-full text-center">
                         <p className='w-5/6 text-2xl font-bold'>
-                        As a <span className='text-sky-500'>Full-Stack developer</span>,
-                        I possess an extensive expertise of 5 years in the field. During this span of time,
-                        my projects scope covered developing customized internal management systems tailored to specifics of organizations as well as warehouse management solutions and real estate websites creation.
+                        As an individual who specializes in both <span className='text-sky-500'>front-end and back-end</span> programming,
+                        I have accumulated extensive knowledge and hands-on involvement in the field of development within a span of 5 years.
+                        Throughout this period, my expertise has allowed me to develop <span className='text-sky-500'>warehouse management systems</span> as required by clients,
+                        improve and maintain websites tailored for <span className='text-sky-500'>real estate</span> purposes while also designing and implementing specialized internal company websites.
                         </p>
                     </div>
                 </div>
@@ -184,9 +185,10 @@ const App: React.FC = () => {
                         <div className="mb-10">
                             <p className='text-lg'>N-Squared eCommerce (2021-2023)</p>
                             <p className='text-slate-500 pb-5'>
-                            I have enhanced the <span className='text-sky-500'>warehouse management systems</span> by designing them in a way that facilitates simple operation within a warehouse environment.
-                            I tackled and solved obstacles to minimize the duration of work involved.
-                            The mechanism covers various methods from receiving goods, selecting and storing items, as well as upkeeping an inventory system for storage purposes.
+                            I have worked on and improved <span className='text-sky-500'>warehouse management systems</span> to support easy operation within warehouses.
+                            I addressed and resolved issues to reduce work duration.
+                            The system includes processes such as receiving goods into the warehouse,
+                            picking and packing, and managing inventory in storage.
                             </p>
                             <p className='text-slate-500 mb-5'>
                             I am skilled in working with <span className='text-sky-500'>Proxy APIs</span>. The purpose of this system is to enable third-party entities to retrieve specific company information, subject to authorization conditions.
@@ -196,14 +198,14 @@ const App: React.FC = () => {
                         <div className="mb-10">
                             <p className='text-lg'>Livinginsider Company Limited (2020-2021)</p>
                             <p className='text-slate-500 mb-5'>
-                            Created a platform for people who wish to sell properties that have an emphasis on a user-friendly frontend interface.
-                            This <span className='text-sky-500'>real estate</span> marketplace includes profile systems, which enable members to evaluate ratings and critiques of other individuals.
-                            Furthermore, it contains multiple property sales system that serves different brands selling real estate in Thailand.
+                            Developed a real estate marketplace platform for individuals interested in selling properties, with a focus on user-friendly frontend interface.
+                            The platform includes profile systems where users can view ratings and review profiles of other members. Additionally,
+                            it incorporates a property sales system catering to multiple brands selling <span className='text-sky-500'>real estate</span> in Thailand.
                             </p>
                             <p className='text-slate-500 mb-5'>
-                            Partnered with MSIG insurance companies to create an online <span className='text-sky-500'>insurance platform</span>.
-                            Our organization assumed the role of the customer-facing portal for purchasing policies and lodging claims following property damage that lies within coverage limits.
-                            Subsequently, claim processing communication would be catered by MSIG.
+                            Collaborated with Livinginsider company and MSIG <span className='text-sky-500'>insurance</span> company to develop an insurance website.
+                            Our company served as the frontend interface for customers to purchase insurance and submit claims for damaged properties within the insurance coverage.
+                            MSIG would then handle customer communication for claim processing.
                             </p>
                             <p className='text-slate-500 mb-5'>
                             Improved and updated a <span className='text-sky-500'>Line bot</span> system using the <span className='text-sky-500'>Go lang</span> based on user feedback.
@@ -212,11 +214,16 @@ const App: React.FC = () => {
                         </div>
                         <div className="mb-10">
                             <p className='text-lg'>Databar Company Limited (2018 - 2020)</p>
-                            <span className='text-slate-500'>
-                            Developed websites for product information, covering hardware and software.
-                            Built a comprehensive management system for handling Repairing Process, Delivery Order, and Quotation.
-                            Developed a Mobile Device Management system for efficient device management.
-                            </span>
+                            <p className='text-slate-500 mb-5'>
+                            Developed a system for handling <span className='text-sky-500'>internal product repairs</span> within an organization,
+                            starting from creating documentation for receiving goods at the receiving point to the repair process itself.
+                            The system also includes generating repair quotations and monitoring the performance of employees involved in the repair process.
+                            </p>
+                            <p className='text-slate-500 mb-5'>
+                            Developed a <span className='text-sky-500'>product borrowing</span> and returning system from the warehouse,
+                            allowing sales representatives to provide Demo products to interested companies for trial purposes.
+                            The system provides details of the borrowed products and specifies the return deadline.
+                            </p>
                         </div>
                     </div>
                 </div>
