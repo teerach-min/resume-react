@@ -1,35 +1,99 @@
 .Card {
-    background-color: #232a2f;
-    border-radius: 1rem;
-    color: #fff;
-    padding: 1rem 2rem;
+    background-color: #ffffff;
+    border-radius: 15px;
+    color: #374151;
+    padding: 1.5rem 1rem;
     text-align: center;
-    margin: auto 1rem 2rem;
-    min-width: 160px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    margin: 0.5rem;
+    min-width: 140px;
+    max-width: 160px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.Card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-color: #2563eb;
 }
 
 .Card img {
     width: 100%;
-    max-width: 5rem;
-    margin: auto;
+    max-width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+    margin: 0 auto 1rem;
     display: block;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
 }
-/* 
-.Card:first-child {
-    margin-left: 0 !important;
-} */
 
+.Card:hover img {
+    filter: grayscale(0%);
+}
 
 .Card span {
     display: block;
-    padding-top: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
 }
 
-.Card .advance {
-    color: #23f89f;
+.Card p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 0;
+}
+
+.Card .advanced {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.Card .intermediate {
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
 }
 
 .Card .basic {
-    color: #caf823;
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+/* Legacy support for old class names */
+.Card .advance {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Card {
+        min-width: 120px;
+        max-width: 140px;
+        padding: 1rem 0.75rem;
+    }
+    
+    .Card img {
+        max-width: 3rem;
+        height: 3rem;
+    }
+    
+    .Card span {
+        font-size: 0.8rem;
+    }
+    
+    .Card p {
+        font-size: 0.7rem;
+    }
 }
