@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Apple iOS Inspired Design */
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +6,12 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.47;
+  color: #1d1d1f;
   background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -18,50 +20,57 @@ body {
   padding: 0 20px;
 }
 
-/* Navigation */
+/* Navigation - iOS Style */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid #e5e7eb;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  padding: 1rem 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 0;
+  transition: all 0.3s ease;
 }
 
 .navbar .logo h2 {
-  color: #2563eb;
-  font-weight: 700;
-  font-size: 1.5rem;
+  color: #1d1d1f;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
 }
 
 .nav-menu {
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .nav-menu a {
   text-decoration: none;
-  color: #374151;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  color: #1d1d1f;
+  font-weight: 400;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
   position: relative;
+  letter-spacing: -0.01em;
 }
 
 .nav-menu a:hover {
-  color: #2563eb;
+  color: #007aff;
+  transform: translateY(-1px);
 }
 
 .nav-menu a::after {
   content: '';
   position: absolute;
-  bottom: -5px;
-  left: 0;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: #2563eb;
+  background-color: #007aff;
+  border-radius: 1px;
   transition: width 0.3s ease;
 }
 
@@ -69,85 +78,111 @@ body {
   width: 100%;
 }
 
-/* Hero Section */
+/* Hero Section - iOS Style */
 .hero-section {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: linear-gradient(135deg, #f5f5f7 0%, #ffffff 100%);
   display: flex;
   align-items: center;
   padding-top: 80px;
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(0, 122, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .hero-content {
   max-width: 800px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-title {
-  font-size: 4rem;
-  font-weight: 800;
-  color: #1e293b;
-  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 1.5rem;
   line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
-  color: #64748b;
-  margin-bottom: 2rem;
+  font-size: 1.375rem;
+  color: #86868b;
+  margin-bottom: 2.5rem;
   font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
 .hero-contact {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .hero-contact p {
-  color: #475569;
-  font-weight: 500;
+  color: #1d1d1f;
+  font-weight: 400;
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  border: 1px solid #e2e8f0;
+  padding: 0.75rem 1.25rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.95rem;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all 0.2s ease;
 }
 
-/* Section Styles */
+.hero-contact p:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styles - iOS Style */
 section {
-  padding: 5rem 0;
+  padding: 6rem 0;
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-weight: 700;
   text-align: center;
-  color: #1e293b;
-  margin-bottom: 3rem;
+  color: #1d1d1f;
+  margin-bottom: 4rem;
   position: relative;
+  letter-spacing: -0.02em;
 }
 
 .section-title::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #007aff, #5856d6);
   border-radius: 2px;
 }
 
-/* About Section */
+/* About Section - iOS Style */
 .about-section {
-  background-color: #f8fafc;
+  background-color: #f5f5f7;
 }
 
 .about-content {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 4rem;
+  gap: 5rem;
   align-items: center;
 }
 
@@ -156,46 +191,74 @@ section {
 }
 
 .profile-image img {
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   object-fit: cover;
   border: 8px solid #ffffff;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.profile-image img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
 .profile-info h3 {
-  font-size: 2.5rem;
-  color: #1e293b;
-  margin-bottom: 1.5rem;
+  font-size: 2.25rem;
+  color: #1d1d1f;
+  margin-bottom: 2rem;
   font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .personal-details {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .personal-details p {
-  margin-bottom: 0.5rem;
-  color: #475569;
-  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: #86868b;
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.personal-details strong {
+  color: #1d1d1f;
+  font-weight: 600;
 }
 
 .summary {
   background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #2563eb;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.summary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #007aff, #5856d6);
 }
 
 .summary p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #374151;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #1d1d1f;
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
-/* Experience Section */
+/* Experience Section - iOS Style */
 .experience-section {
   background-color: #ffffff;
 }
@@ -206,79 +269,101 @@ section {
 }
 
 .experience-item {
-  background-color: #f8fafc;
-  margin-bottom: 2rem;
-  padding: 2rem;
-  border-radius: 15px;
-  border-left: 4px solid #2563eb;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f5f5f7;
+  margin-bottom: 2.5rem;
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #007aff, #5856d6);
 }
 
 .experience-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
 .experience-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .experience-header h3 {
   font-size: 1.5rem;
-  color: #1e293b;
-  margin-bottom: 0.5rem;
+  color: #1d1d1f;
+  margin-bottom: 0.75rem;
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .duration {
-  background-color: #2563eb;
+  background-color: #007aff;
   color: white;
-  padding: 0.25rem 0.75rem;
+  padding: 0.375rem 1rem;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 500;
   margin-right: 1rem;
+  display: inline-block;
+  letter-spacing: -0.01em;
 }
 
 .position {
-  color: #64748b;
-  font-weight: 600;
-  font-size: 1.1rem;
+  color: #86868b;
+  font-weight: 500;
+  font-size: 1.125rem;
+  letter-spacing: -0.01em;
 }
 
 .experience-content ul {
   list-style: none;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .experience-content li {
   position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #374151;
+  padding-left: 2rem;
+  margin-bottom: 0.75rem;
+  color: #1d1d1f;
   line-height: 1.6;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
 }
 
 .experience-content li::before {
-  content: '▶';
+  content: '●';
   position: absolute;
   left: 0;
-  color: #2563eb;
-  font-size: 0.8rem;
+  color: #007aff;
+  font-size: 0.75rem;
+  top: 0.25rem;
 }
 
 .tech-stack {
-  background-color: #e0f2fe;
-  padding: 1rem;
-  border-radius: 10px;
-  color: #0369a1;
+  background-color: rgba(0, 122, 255, 0.1);
+  padding: 1.25rem;
+  border-radius: 15px;
+  color: #007aff;
   font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  border: 1px solid rgba(0, 122, 255, 0.2);
 }
 
-/* Skills Section */
+/* Skills Section - iOS Style */
 .skills-section {
-  background-color: #f8fafc;
+  background-color: #f5f5f7;
 }
 
 .skills-grid {
@@ -289,17 +374,25 @@ section {
 
 .skill-category {
   background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .skill-category h3 {
   font-size: 1.5rem;
-  color: #1e293b;
-  margin-bottom: 1.5rem;
+  color: #1d1d1f;
+  margin-bottom: 2rem;
   text-align: center;
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .skill-items {
@@ -312,21 +405,29 @@ section {
 .tools-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.75rem;
   justify-content: center;
 }
 
 .tool-item {
-  background-color: #e0f2fe;
-  color: #0369a1;
-  padding: 0.5rem 1rem;
+  background-color: rgba(0, 122, 255, 0.1);
+  color: #007aff;
+  padding: 0.75rem 1.25rem;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  border: 1px solid #bae6fd;
+  border: 1px solid rgba(0, 122, 255, 0.2);
+  transition: all 0.2s ease;
+  letter-spacing: -0.01em;
 }
 
-/* Education Section */
+.tool-item:hover {
+  background-color: #007aff;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Education Section - iOS Style */
 .education-section {
   background-color: #ffffff;
 }
@@ -337,93 +438,140 @@ section {
 }
 
 .education-item {
-  background-color: #f8fafc;
-  padding: 2rem;
-  margin-bottom: 1.5rem;
-  border-radius: 15px;
-  border-left: 4px solid #10b981;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  background-color: #f5f5f7;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #34c759, #30d158);
+}
+
+.education-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .education-item h3 {
   font-size: 1.5rem;
-  color: #1e293b;
-  margin-bottom: 0.5rem;
+  color: #1d1d1f;
+  margin-bottom: 0.75rem;
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .degree {
-  color: #64748b;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
+  color: #86868b;
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
 .education-duration {
-  color: #6b7280;
-  margin-bottom: 0.5rem;
+  color: #86868b;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
 }
 
 .gpa {
-  background-color: #10b981;
+  background-color: #34c759;
   color: white;
-  padding: 0.25rem 0.75rem;
+  padding: 0.5rem 1.25rem;
   border-radius: 20px;
   font-weight: 600;
   display: inline-block;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
 }
 
-/* Footer */
+/* Footer - iOS Style */
 .footer {
-  background-color: #1e293b;
-  color: #ffffff;
-  padding: 3rem 0;
+  background-color: #1d1d1f;
+  color: #f5f5f7;
+  padding: 4rem 0;
   text-align: center;
 }
 
 .footer p {
-  margin-bottom: 1rem;
-  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+  color: #86868b;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
 }
 
 .contact-info {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .contact-info p {
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: #86868b;
+  letter-spacing: -0.01em;
 }
 
-/* Responsive Design */
+/* iOS-style Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.experience-item,
+.education-item,
+.skill-category {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive Design - iOS Style */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
   }
   
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
   
   .hero-contact {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
   
   .about-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
     text-align: center;
   }
   
   .profile-image img {
-    width: 250px;
-    height: 250px;
+    width: 240px;
+    height: 240px;
   }
   
   .nav-menu {
-    gap: 1rem;
+    gap: 1.5rem;
   }
   
   .nav-menu a {
@@ -431,17 +579,23 @@ section {
   }
   
   .section-title {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
   
   .skills-grid {
     grid-template-columns: 1fr;
   }
+  
+  .experience-item,
+  .education-item,
+  .skill-category {
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 15px;
+    padding: 0 16px;
   }
   
   .hero-title {
@@ -458,4 +612,34 @@ section {
   .skill-category {
     padding: 1.5rem;
   }
+  
+  .section-title {
+    font-size: 1.875rem;
+  }
+  
+  .nav-menu {
+    gap: 1rem;
+  }
+  
+  .nav-menu a {
+    font-size: 0.85rem;
+  }
+}
+
+/* iOS-style Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }

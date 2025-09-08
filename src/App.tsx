@@ -178,7 +178,7 @@ const App: React.FC = () => {
                         <h1 className="hero-title">Full Stack Developer</h1>
                         <p className="hero-subtitle">{yearsOfExperience} Years of Experience in Web & Mobile Development</p>
                         <div className="hero-contact">
-                            <p>📧 teerach.min@gmail.com</p>
+                            <p>✉️ teerach.min@gmail.com</p>
                             <p>📱 086 714 0083</p>
                             <p>📍 Bangkok, Thailand</p>
                         </div>
@@ -384,7 +384,7 @@ const App: React.FC = () => {
                 <div className="container mx-auto text-center">
                     <p>&copy; 2024 Teerach Mincharoen. All rights reserved.</p>
                     <div className="contact-info">
-                        <p>📧 teerach.min@gmail.com | 📱 086 714 0083</p>
+                        <p>✉️ teerach.min@gmail.com | 📱 086 714 0083</p>
                         <p>📍 600/96 Rimkhlong Latphrao Rd., Bangkapi, Huai Khwang, Bangkok 10310</p>
                     </div>
                 </div>
